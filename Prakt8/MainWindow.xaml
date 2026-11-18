@@ -1,0 +1,37 @@
+﻿<Window x:Class="Prakt8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Практическая работа №8"
+        Height="650"
+        Width="750"
+        WindowStartupLocation="CenterScreen">
+
+    <StackPanel Margin="20">
+
+        <TextBlock Text="Информация о студентах" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+        <TextBlock Text="Фамилия:"/>
+        <TextBox x:Name="txtSurname" Text="Иванов" Height="25" Margin="0,3,0,10"/>
+        <CheckBox x:Name="chkDormitory" Content="Нуждается в общежитии" Margin="0,3,0,10"/>
+        <TextBlock Text="Стаж работы (лет):"/>
+        <TextBox x:Name="txtExperience" Text="1" Height="25" Margin="0,3,0,10"/>
+        <CheckBox x:Name="chkWorked" Content="Ранее работал" Margin="0,3,0,10"/>
+        <TextBlock Text="Что окончил:"/>
+        <TextBox x:Name="txtEducation" Text="Школу" Height="25" Margin="0,3,0,10"/>
+
+        <TextBlock Text="Какой язык изучал:"/>
+        <TextBox x:Name="txtLanguage" Text="Английский" Height="25" Margin="0,3,0,15"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Добавить студента" Width="170" Height="35" Margin="5" Click="AddStudent_Click"/>
+            <Button Content="Очистить список" Width="170" Height="35" Margin="5" Click="Clear_Click"/>
+        </StackPanel>
+
+        <TextBlock Text="Список студентов:" FontWeight="Bold" Margin="0,15,0,5"/>
+        <ListBox x:Name="lstStudents" Height="130"/>
+        <TextBlock x:Name="txtDormitoryCount" Text="Нуждаются в общежитии: 0" FontSize="16" FontWeight="Bold" Margin="0,10,0,10"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="О программе" Width="140" Height="35" Margin="5" Click="About_Click"/>
+            <Button Content="Выход" Width="140" Height="35" Margin="5" Click="Exit_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
